@@ -53,6 +53,13 @@ set scheme cblind1
 	graph 		export 		$figure_dir/`y'/figure_replace_me.`y'		, as(`y') name("Graph") replace // This is a template to produce the figure automatically into three different formats and 
 																										// to save them in each of their designated	folders. e.g. pdf format of figure will be saved as filename.pdf in the pdf folder.
 	}
+	
+	graph 		bar 		mpg,       over(rep78) over(foreign) legend(off) asyvar showyvars
+
+	foreach 	y in 		png eps pdf {
+	graph 		export 		$figure_dir/`y'/figure_replace_me1.`y'		, as(`y') name("Graph") replace // This is a template to produce the figure automatically into three different formats and 
+																										// to save them in each of their designated	folders. e.g. pdf format of figure will be saved as filename.pdf in the pdf folder.
+	}
 	  
 ********************************************************************************
 ****                                                                        ****
